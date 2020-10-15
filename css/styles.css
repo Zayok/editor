@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'Proxima Nova Regular';
+    src: url('../fonts/pro/Proxima\ Nova\ Regular.otf') format('opentype'),
+    url('../fonts/pro/proxima_nova_regular-webfont.woff2') format('woff2'),
+         url('../fonts/pro/proxima_nova_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Futura PT Heavy';
+    src: url('../fonts/futura-pt/heavy.eot');
+        src: url('../fonts/futura-pt/heavy.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/futura-pt/heavy.woff') format('woff'),
+             url('../fonts/futura-pt/heavy.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;}
+   
+    
+* {
+    box-sizing: border-box; /*выбираем способ расчета с учетом рамки*/
+}
+a, button{
+    transition: all .3s ease-in-out;
+}
+html{
+    font-style: 10px;
+}
+body{
+    background-color: #464f54;
+    font: 2.7rem Georgia, serif;
+    color: black;
+    line-height: 1.6;
+    position: relative;
+}
+.post{
+   margin: 150px auto 50px;
+   background-color: white;
+   max-width: 1060px;
+   padding: 190px 130px 130px;
+   box-shadow: i 0 0 35px rgba(0,0 , 0, .22);
+   position: relative;/*для того чтобы полоска была*/
+}
+.post:before{
+    content:'';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 70px;
+    border-left: 2px solid #e8eced;
+}
+.post__suptitle{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #b4b4b4;
+    font-family: 'Proxima Nova Regular';
+    font-size: 0;
+
+}
+.post__autor,
+.post__date{
+    font-size: 2rem;
+}
+.post__autor:not(:empty)+.post__date:not(:empty)::before{
+    content: ',';
+}
+.post__title{
+    font-family: 'Futura PT';
+    font-style: 7.8rem;
+    line-height: 1;
+    color: #2a2a2a;
+    letter-spacing: 5px;
+    margin: 30px 0 15px;
+}
+.post_subtitle{
+    font-style: italic;
+    font-size: 3rem;
+    color: #8f8f8f;
+}
+.post__text{
+    margin: 40px 0;
+}
+.editor{
+position: absolute;
+right: 0;
+top: -100px;
+width: 75%;
+z-index: 1;
+}
+.editor__area{
+    background-color: #181818;
+padding: 40px 0 50px 60px;
+}
+.editor__btns{
+    background-color: #fbc02d;
+    padding: 20px 40px;
+    margin-left: 65px;
+}
